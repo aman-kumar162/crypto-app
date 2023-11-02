@@ -46,11 +46,12 @@ const Coins = () => {
            </div>
           { 
             coins.filter((data)=>{
-               if(data == ''){
+               if(data === ''){
                 return data
                } else if(data.name.toLowerCase().includes(search.toLowerCase())){
                    return data
                }
+                
             }).map((coindata, i)=>{
               return(
               <CoinCard key={i} coindata={coindata} id={coindata.id}  i={i} currencySymbol={currencySymbol}  />
@@ -67,7 +68,7 @@ const  CoinCard=({coindata, currencySymbol, i, id})=>{
   const profit = coindata.price_change_percentage_24h>0 
   return(
    <Link to={`/coins/${id}`} style={{color:"white", textDecoration:'none'}} >
-          <div className='ex-cards'>
+          <div key={i} className='ex-cards'>
     <div className="image">
       <img height={"80px"} src={coindata.image} alt="" />
     </div>

@@ -3,8 +3,8 @@ import Header from './Header'
 import axios from "axios"
 import { Baseurl } from './baseUrl'
 import Loader from './Loader'
-import coin from '../coin.png'
-import eth from '../eth.png'
+// import coin from '../coin.png'
+// import eth from '../eth.png'
 import './Exchanges.css'
 import OurModel from './OurModel'
 const Exchanges = () => {
@@ -30,7 +30,7 @@ const Exchanges = () => {
      {
       exchanges.map((item,i)=>{
         return(
-          <div key={i} className='ex-cards'>
+          <div key={i} className='ex-cards' >
           <div className="image">
             <img height={"80px"} src={item.image} alt="" />
           </div>

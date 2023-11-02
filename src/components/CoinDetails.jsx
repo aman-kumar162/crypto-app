@@ -4,7 +4,7 @@ import { Baseurl } from './baseUrl'
 import Loader from './Loader'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import coinImage from '../coin.png'
+// import coinImage from '../coin.png'
 import './coinDetail.css'
 import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi"
 import { IoPulseOutline } from "react-icons/io5"
@@ -35,7 +35,9 @@ const CoinDetails = () => {
   <>
   {
     loading ? <Loader/> : <> 
-         <div className=' coin-detail'  > 
+      {/* //somehing written style={{display:'flex',justifyContent:'space-evenly'}*/}
+         <div className=' coin-detail'  >
+        
            <div className='coin-info'>
            <div className='btn'>
              <button onClick={()=>setCurrency('inr')} >inr</button>
